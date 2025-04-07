@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartSlope Homepage</title>
+    <title>SmartSlope - Your Customizable Putting Green</title>
 </head>
 <body>
-    <p>Welcome to SmartSlope's Website</p>
-    <p>SmartSlope is an innovative putting trainer designed to get you real practice at home.</p>
+    <header>
+        <h1>SmartSlope</h1>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Practice Putting Like Never Before</h1>
+            <p>SmartSlope is the revolutionary customizable putting green that brings the golf course to your home.</p>
+            <button>Learn More</button>
+        </section>
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <img src="placeholder1.jpg" alt="SmartSlope in use 1">
+                <img src="placeholder2.jpg" alt="SmartSlope in use 2">
+                <img src="placeholder3.jpg" alt="SmartSlope in use 3">
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Customizable Slopes</h3>
+                <p>Adjust the slope to simulate any break on the course.</p>
+            </div>
+            <div class="feature">
+                <h3>Realistic Green Feel</h3>
+                <p>High-quality turf provides a true roll and feel.</p>
+            </div>
+            <div class="feature">
+                <h3>Compact Design</h3>
+                <p>Easily store your SmartSlope when not in use.</p>
+            </div>
+            <div class="feature">
+                <h3>Improve Your Game</h3>
+                <p>Get real practice at home and lower your scores.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 SmartSlope</p>
+    </footer>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+        const imageWidth = images[0].clientWidth;
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
 </body>
 </html>
