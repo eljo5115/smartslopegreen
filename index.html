@@ -4,68 +4,291 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartSlope - Your Customizable Putting Green</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>SmartSlope</h1>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-golf-ball"></i>
+                <span>SmartSlope</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
+    
     <div class="container">
         <section class="hero">
-            <h1>Practice Putting Like Never Before</h1>
-            <p>SmartSlope is the revolutionary customizable putting green that brings the golf course to your home.</p>
-            <button>Learn More</button>
+            <h1>Master Every Putt with SmartSlope</h1>
+            <p>The revolutionary adjustable putting green that brings the golf course to your home, office, or anywhere you want to practice.</p>
+            <button class="btn">Shop Now</button>
         </section>
-
+        
         <section class="carousel-container">
             <div class="carousel">
-                <img src="placeholder1.jpg" alt="SmartSlope in use 1">
-                <img src="placeholder2.jpg" alt="SmartSlope in use 2">
-                <img src="placeholder3.jpg" alt="SmartSlope in use 3">
+                <img src="placeholder1.jpg" alt="SmartSlope in use - Home setup">
+                <img src="placeholder2.jpg" alt="SmartSlope in use - Office setup">
+                <img src="placeholder3.jpg" alt="SmartSlope in use - Outdoor setup">
             </div>
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-nav"></div>
         </section>
-
-        <section class="features">
+        
+        <section class="slope-simulator">
+            <h2>Experience SmartSlope</h2>
+            <div class="simulator-container">
+                <div class="green-surface">
+                    <div class="hole"></div>
+                    <div class="ball"></div>
+                    <div class="grid-overlay"></div>
+                </div>
+            </div>
+            <div class="slope-controls">
+                <div class="slope-control">
+                    <h4>Uphill/Downhill Slope</h4>
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span>Downhill</span>
+                            <span>Flat</span>
+                            <span>Uphill</span>
+                        </div>
+                        <input type="range" min="-100" max="100" value="0" class="slider" id="vertical-slope-slider">
+                    </div>
+                </div>
+                <div class="slope-control">
+                    <h4>Left/Right Break</h4>
+                    <div class="slider-container">
+                        <div class="slider-label">
+                            <span>Left Break</span>
+                            <span>Flat</span>
+                            <span>Right Break</span>
+                        </div>
+                        <input type="range" min="-100" max="100" value="0" class="slider" id="horizontal-slope-slider">
+                    </div>
+                </div>
+            </div>
+            <button class="btn reset-simulator">Reset Slope</button>
+            <p>Adjust the sliders to create different putting challenges! Move from a flat surface to any combination of slopes to simulate real course conditions.</p>
+        </section>
+        
+        <section class="features" id="features">
             <div class="feature">
+                <i class="fas fa-sliders-h"></i>
                 <h3>Customizable Slopes</h3>
-                <p>Adjust the slope to simulate any break on the course.</p>
+                <p>Adjust the slope from 0 to 5 degrees in any direction to simulate any break on the course. Perfect your uphill, downhill, and side-hill putts.</p>
             </div>
             <div class="feature">
+                <i class="fas fa-leaf"></i>
                 <h3>Realistic Green Feel</h3>
-                <p>High-quality turf provides a true roll and feel.</p>
+                <p>Premium high-quality turf with 11 on the Stimpmeter provides a true roll and authentic feel like you're on a real golf course.</p>
             </div>
             <div class="feature">
+                <i class="fas fa-compress-arrows-alt"></i>
                 <h3>Compact Design</h3>
-                <p>Easily store your SmartSlope when not in use.</p>
+                <p>The foldable design makes it easy to store your SmartSlope when not in use. Perfect for homes, offices, or anywhere space is limited.</p>
             </div>
             <div class="feature">
+                <i class="fas fa-trophy"></i>
                 <h3>Improve Your Game</h3>
-                <p>Get real practice at home and lower your scores.</p>
+                <p>Practice makes perfect. With regular use, SmartSlope users report an average of 3 fewer putts per round.</p>
             </div>
         </section>
-
-        <section class="contact">
+        
+        <section class="video-container">
+            <iframe src="https://www.youtube.com/embed/placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        
+        <section class="testimonials" id="testimonials">
+            <div class="testimonials-container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "SmartSlope has completely transformed my putting game. Being able to practice on different slopes at home has made me much more confident on the course. I've shaved 3 strokes off my handicap in just two months!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="customer1.jpg" alt="Customer photo">
+                        <div>
+                            <h4>Michael T.</h4>
+                            <p>Handicap: 8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "As a teaching pro, I recommend SmartSlope to all my students. The ability to practice on various slopes helps them develop feel and consistency. It's the closest thing to practicing on a real green."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="customer2.jpg" alt="Golf pro photo">
+                        <div>
+                            <h4>Sarah J.</h4>
+                            <p>PGA Teaching Professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pricing" id="pricing">
+            <h2>Choose Your SmartSlope</h2>
+            <div class="pricing-grid">
+                <div class="pricing-plan">
+                    <h3>SmartSlope Standard</h3>
+                    <div class="price">$249</div>
+                    <ul>
+                        <li>6' x 3' putting surface</li>
+                        <li>0-3° slope adjustability</li>
+                        <li>High-quality 11 stimp turf</li>
+                        <li>Manual slope adjustment</li>
+                        <li>1-year warranty</li>
+                    </ul>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="pricing-plan popular">
+                    <h3>SmartSlope Pro</h3>
+                    <div class="price">$349</div>
+                    <ul>
+                        <li>8' x 4' putting surface</li>
+                        <li>0-5° slope adjustability</li>
+                        <li>Premium 11 stimp turf</li>
+                        <li>Quick-adjust mechanism</li>
+                        <li>2 holes with auto ball return</li>
+                        <li>3-year warranty</li>
+                    </ul>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="pricing-plan">
+                    <h3>SmartSlope Elite</h3>
+                    <div class="price">$499</div>
+                    <ul>
+                        <li>10' x 5' putting surface</li>
+                        <li>0-5° slope adjustability</li>
+                        <li>Tour-grade 12 stimp turf</li>
+                        <li>Digital slope control</li>
+                        <li>Multiple holes with auto ball return</li>
+                        <li>5-year warranty</li>
+                        <li>Smartphone app integration</li>
+                    </ul>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does it take to set up the SmartSlope?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>SmartSlope arrives fully assembled and ready to use out of the box. Simply unfold it, adjust the slope to your desired angle, and you're ready to start practicing!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use SmartSlope outdoors?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! While SmartSlope is designed primarily for indoor use, it can be used outdoors on a flat surface. However, we recommend bringing it inside when not in use to protect it from the elements and extend its lifespan.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I adjust the slope?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>For Standard and Pro models, simply use the adjustment knobs located on the sides of the green. Turn clockwise to increase slope and counterclockwise to decrease. The Elite model features digital slope control via the control panel or smartphone app.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Does SmartSlope come with a warranty?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! The Standard model comes with a 1-year warranty, the Pro model with a 3-year warranty, and the Elite model with a 5-year warranty. All warranties cover manufacturing defects and mechanical issues.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I clean and maintain my SmartSlope?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Regular maintenance is simple. Vacuum the surface occasionally to remove dust and debris. For deeper cleaning, use a mild soap solution with a soft brush, then rinse and let dry completely before storage. Avoid harsh chemicals that might damage the turf.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
             <h2>Contact Us</h2>
-            <p>Have questions or want to learn more? Reach out to us!</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
+            <p>Have questions or want to learn more? Reach out to our team!</p>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </section>
     </div>
     
     <footer>
-        <p>&copy; 2025 SmartSlope LLC</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SmartSlope</h3>
+                    <p>Bringing the golf course to your home with adjustable, realistic putting surfaces that help improve your game.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Way, Golf City, GC 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@smartslope.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SmartSlope LLC. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
