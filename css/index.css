@@ -890,3 +890,18 @@ footer {
         animation: none !important;
     }
 }
+.hero-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.video-caption {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin-top: 1rem;
+    max-width: 700px;
+    text-align: center;
+}
